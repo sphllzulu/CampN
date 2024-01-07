@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>camping</title>
+  </head>
+  <body>
+    <!--Navbar section-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Camp N' Tours</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!--Modal section-->
+      <div class="modal fade" tabindex="-1" id="booking-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Book trip</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        id="email1"
+                        class="form-control"
+                        placeholder="Type your email address"
+                      />
+                      <label for="email1">Email address</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select id="select1" class="form-select">
+                        <option>Kruger national Park, Limpopo</option>
+                        <option>Tofo Beach, Mozambique</option>
+                        <option>Cederburg,CapeTown</option>
+                      </select>
+                      <label for="select1">Pick a trip</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Book</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--carousel section-->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img
+              src="images/slider1.jpg"
+              class="d-block w-100 c-img"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <p class="fs-3 mt-5 text-uppercase">
+                Discover the world with us at
+              </p>
+              <h1 class="display-1 fw-bolder text-capitalize">Camp N' Tours</h1>
+              <button
+                type="button"
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
+                Book trip
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img
+              src="images/slider2.jpg"
+              class="d-block w-100 c-img"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <p class="fs-3 mt-5 text-uppercase">Vacation or Staycation?</p>
+              <h1 class="display-1 fw-bolder text-capitalize">
+                We've got you!
+              </h1>
+              <button
+                type="button"
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
+                Book trip
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img
+              src="images/slider3.jpg"
+              class="d-block w-100 c-img"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-4">
+              <p class="fs-3 mt-5 text-uppercase">Stargazing trips</p>
+              <h1 class="display-1 fw-bolder text-capitalize">
+                We have it all!
+              </h1>
+              <button
+                type="button"
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
+                Book trip
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Overview section-->
+
+      <section class="overview">
+        <div class="container h-100 d-flex align-items-center">
+          <div class="row w-100 text-center fs-4">
+            <div class="col-xl">
+              <i class="bi bi-airplane-fill me-2"></i>
+              3 Amazing Destinations
+            </div>
+
+            <div class="col-xl">
+              <i class="bi bi-wallet-fill me-2"></i>
+              Pay 20% deposit to secure your space
+            </div>
+
+            <div class="col-xl">
+              <i class="bi bi-patch-check-fill me-2"></i>
+              So far we've had 250 customers
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Packages section-->
+      <section id="packages" class="pt-5">
+        <h2 class="text-center my-5">Packages</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg">
+              <div class="card">
+                <img src="images/kruger.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Kruger National Part</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil distinctio inventore quaerat vero voluptatibus nisi
+                    pariatur corrupti doloremque soluta ea.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    Book trip
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img src="images/tofo.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Tofo Beach Mozambique</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque voluptatibus at ullam minus consequuntur quibusdam
+                    praesentium iure ea in eius?
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    Book trip
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="images/cederburg.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cederburg, Capetown</h5>
+                  <p class="card-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Non deleniti ratione praesentium voluptates esse fugiat
+                    vitae, architecto aspernatur soluta quas.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    Book trip
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--FAQ Section-->
+      <section id="faq" class="py-md-5">
+        <h2 class="my-5 text-center">FAQs</h2>
+        <div class="accordion w-75 mx-auto" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Are there tour guides assigned to every trip?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>Yes </strong> There are guides assigned, they will
+                assist you from when you get off the airport
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Are guests allowed to tip the guides?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>No </strong> The tour guides are paid by the agency
+                therefore is it prohibited to tip the tour guides
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                How long are the trips?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>Depends on the trip you book</strong> The longevity of
+                the trip will be discussed as soon as you book your trip.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark py-3 mt-3">
+        <div class="container text-light text-center">
+            <p class=" mb-3">Camp N' Tours</p>
+            <small class="text-white-50">&copy; Copyright by Siphelele Zulu. All rights reserved.</small>
+
+        </div>
+
+    </footer>
+  </body>
+</html>
